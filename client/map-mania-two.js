@@ -1,4 +1,7 @@
 var gMap;
+var currentPlaceLoc = 0;
+var currentPlace = favoritePlace[currentPlaceLoc];
+var score = 0;
 
 function initMap() {
     gMap = new google.maps.Map(document.getElementById('myMapID'), {
@@ -88,40 +91,62 @@ function initMap() {
     });
 }
 
+Score(score);
+SetHint("hint")
+
+function Score() {
+
+}
+
+function SetHint(hint) {
+    document.getElementById("Hint-id").value = hint;
+}
+
 function updateGame() {
-    console.log('function updateGame() google-maps-step-03!');
+    console.log('function updateGame()');
     var zoomLevel = gMap.getZoom()
     var inBounds = false;
+    SetHint("You are out of Bounds");
 
     if (gMap.getBounds().contains({lat:35.6860,lng:139.7685})) { //loc1
         inBounds = true;
+        SetHint("You are In bounds for location 1");
     }
     if (gMap.getBounds().contains({lat:42.0829,lng:-85.8667})) { //loc2
         inBounds = true;
+        SetHint("You are In bounds for location 2");
     }
     if (gMap.getBounds().contains({lat:41.3505,lng:-88.8419})) { //loc3
         inBounds = true;
+        SetHint("You are In bounds for location 3");
     }
     if (gMap.getBounds().contains({lat:41.3204,lng:-88.9935})) { //loc4
         inBounds = true;
+        SetHint("You are In bounds for location 4");
     }
     if (gMap.getBounds().contains({lat:25.7634,lng:-80.1916})) { //loc5
         inBounds = true;
+        SetHint("You are In bounds for location 5");
     }
     if (gMap.getBounds().contains({lat:46.1423,lng:-88.0940})) { //loc6
         inBounds = true;
+        SetHint("You are In bounds for location 6");
     }
     if (gMap.getBounds().contains({lat:43.6274,lng:-89.7605})) { //loc7
         inBounds = true;
+        SetHint("You are In bounds for location 7");
     }
     if (gMap.getBounds().contains({lat:30.2695,lng:-97.7441})) { //loc8
         inBounds = true;
+        SetHint("You are In bounds for location 8");
     }
     if (gMap.getBounds().contains({lat:41.6055,lng:-88.0783})) { //loc9
         inBounds = true;
+        SetHint("You are In bounds for location 9");
     }
     if (gMap.getBounds().contains({lat:41.8758,lng:-87.6242})) { //loc10
         inBounds = true;
+        SetHint("You are In bounds for location 10");
     }
 
     console.log("inBounds:"+inBounds+" zoomLevel:"+zoomLevel);
