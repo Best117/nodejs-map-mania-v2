@@ -84,6 +84,8 @@ function initMap() {
         var infoWindow10 = new google.maps.InfoWindow({content:'Chicago, Illinois'});
         loc10.addListener('click', function() {
             infoWindow10.open(gMap, loc10);
+            ++score
+            Score(score)
         });
 
     google.maps.event.addListener(gMap,'idle', function() {
@@ -95,7 +97,7 @@ Score(score);
 SetHint("hint")
 
 function Score() {
-
+    document.getElementById("Score-id").value = score;
 }
 
 function SetHint(hint) {
