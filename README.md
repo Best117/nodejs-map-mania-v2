@@ -1,11 +1,6 @@
-# Node.js and Express Hosted on Microsoft Azure Template
-
-Dependencies: Node.js and Express
-
-This repository is a template that can be used to create a Node.js and Express website for hosting on Microsoft Azure.
-
-Initial Usage:
-- npm install express
-- npm start
-
-
+# Map Mania V2
+Crocifisso Pusateri,
+Map Mania V2, 
+crocifissovpusater@lewisu.edu, 
+I wrote all the code here with inspiration and help from the tutorial that my teacher made for map mania lite, my teacher is Eric Pogue. 
+HTML code with linked Javascript and CSS files. They utilize the Google maps api to create a google map that has markers for my "favorite places."

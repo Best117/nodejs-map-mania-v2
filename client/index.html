@@ -1,11 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Node.js on Azure Template</title>
-</head>
-<body>
-	<h1>Node.js and Express Hosted on Microsoft Azure Template</h1>
-	<p>This repository is a template that can be used to create a Node.js and Express website for hosting on Microsoft 
-	Azure.</p>
-</body>
+<!doctype html>
+<html lang="en">
+<!--Crocifisso Pusateri 10/20/2022 Web Programming-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Map Mania Lite</title>
+        <link rel="stylesheet" href="map-mania-one.css">
+        <script src="map-mania-one.js"></script>
+
+    </head>
+    <body onload="initApplication()">
+        <h1>Map Mania: My 10 Favorite Locations</h1>
+
+        <div id="myMapID"></div>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpB_FlxtdIaJtX5ZwNnyEh9KD0e_Z9SDo&callback=initMap"
+            async defer>
+        </script>
+
+    </body>
 </html>
