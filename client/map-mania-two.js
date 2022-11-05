@@ -1,3 +1,5 @@
+const { text } = require("express");
+
 var gMap;
 var score = 0
 
@@ -122,6 +124,13 @@ function setHint(hint) {
     document.getElementById("Hint-id").value = hint;
 }
 
+function winThreshold(win) {
+    var text;
+    if (score > 9)
+    text= "win";
+    document.getElementById("Win-id").value = win;
+}
+
 function updateGame() {
     console.log('function updateGame()');
     var zoomLevel = gMap.getZoom()
@@ -170,11 +179,6 @@ function updateGame() {
     }
 
     console.log("inBounds:"+inBounds+" zoomLevel:"+zoomLevel);
-}
-
-function winThreshold() {
-    if (score > 9)
-    window.alert("You have won the game!");
 }
 
 function initApplication() {
