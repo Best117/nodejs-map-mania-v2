@@ -105,19 +105,19 @@ function initMap() {
         });
 
         setScore(score);
+        setHint("hint")
 
     google.maps.event.addListener(gMap,'idle', function() {
         updateGame()
     });
 }
 
-setHint("hint")
 
 function setScore(updateScore) {
     document.getElementById("Score-id").value = updateScore;
 }
 
-function SetHint(hint) {
+function setHint(hint) {
     document.getElementById("Hint-id").value = hint;
 }
 
