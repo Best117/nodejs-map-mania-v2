@@ -174,12 +174,6 @@ function updateGame() {
     console.log("inBounds:"+inBounds+" zoomLevel:"+zoomLevel);
 }
 
-function setWin(win) {
-    if (score = 10)
-    setWin = "You have won the game!";
-    document.getElementById("Win-id").value = win;
-}
-
 function initApplication() {
     console.log('Map Mania: My 10 Favorite Locations Has Begun!');
 }
