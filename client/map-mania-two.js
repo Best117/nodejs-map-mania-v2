@@ -174,7 +174,7 @@ function updateGame() {
 
 function winThreshold() {
     if (score > 9)
-    alert("You have won the game!");
+    window.alert("You have won the game!");
 }
 
 function initApplication() {
