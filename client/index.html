@@ -16,8 +16,20 @@
         <h1>Map Mania: My 10 Favorite Locations</h1>
         Hint: <input id="Hint-id" type="text" value="" size="120" disabled><br><br>
         Score: <input id="Score-id" type="text" value="" size="2" disabled><br><br>
-        <button id="cheat">Cheat</button>
+        <button onclick ="cheat()">Cheat</button>
         <button id="button">Information Modal</button>
+            <p id="cheat"></p>
+            <script>
+                function cheat(){
+                    let text = "Are you sure you want to cheat?";
+                    if (confirm(text) ==true){
+                        score + 10
+                        setScore(score)
+                    } else {
+                        text = "You are not a cheater."
+                    }
+                }
+            </script>
 
             </script>
             <div id="infoModal" class="modal">
