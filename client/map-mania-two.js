@@ -1,6 +1,4 @@
 var gMap;
-var currentPlaceLoc = 0;
-var currentPlace = favoritePlace[currentPlaceLoc];
 var score = 0
 
 function initMap() {
@@ -14,7 +12,7 @@ function initMap() {
         loc1.addListener('click', function() {
             infoWindow1.open(gMap, loc1);
             ++score
-            Score(score)
+            setScore(score)
         });
 
     var loc2 = new google.maps.Marker({position:{lat:42.0829,lng:-85.8667}, map:gMap});
@@ -24,7 +22,7 @@ function initMap() {
         loc2.addListener('click', function() {
             infoWindow2.open(gMap, loc2);
             ++score
-            Score(score)
+            setScore(score)
         });
 
     var loc3 = new google.maps.Marker({position:{lat:41.3505,lng:-88.8419}, map:gMap});
@@ -34,7 +32,7 @@ function initMap() {
         loc3.addListener('click', function() {
             infoWindow3.open(gMap, loc3);
             ++score
-            Score(score)
+            setScore(score)
         });
     
     var loc4 = new google.maps.Marker({position:{lat:41.3204,lng:-88.9935}, map:gMap});
@@ -44,7 +42,7 @@ function initMap() {
         loc4.addListener('click', function() {
             infoWindow4.open(gMap, loc4);
             ++score
-            Score(score)
+            setScore(score)
         });
 
     var loc5 = new google.maps.Marker({position:{lat:25.7634,lng:-80.1916}, map:gMap});
@@ -54,7 +52,7 @@ function initMap() {
         loc5.addListener('click', function() {
             infoWindow5.open(gMap, loc5);
             ++score
-            Score(score)
+            setScore(score)
         });
 
     var loc6 = new google.maps.Marker({position:{lat:46.1423,lng:-88.0940}, map:gMap});
@@ -64,7 +62,7 @@ function initMap() {
         loc6.addListener('click', function() {
             infoWindow6.open(gMap, loc6);
             ++score
-            Score(score)
+            setScore(score)
         });
 
     var loc7 = new google.maps.Marker({position:{lat:43.6274,lng:-89.7605}, map:gMap});
@@ -74,7 +72,7 @@ function initMap() {
         loc7.addListener('click', function() {
             infoWindow7.open(gMap, loc7);
             ++score
-            Score(score)
+            setScore(score)
         });
 
     var loc8 = new google.maps.Marker({position:{lat:30.2695,lng:-97.7441}, map:gMap});
@@ -84,7 +82,7 @@ function initMap() {
         loc8.addListener('click', function() {
             infoWindow8.open(gMap, loc8);
             ++score
-            Score(score)
+            setScore(score)
         });
 
     var loc9 = new google.maps.Marker({position:{lat:41.6055,lng:-88.0783}, map:gMap});
@@ -94,7 +92,7 @@ function initMap() {
         loc9.addListener('click', function() {
             infoWindow9.open(gMap, loc9);
             ++score
-            Score(score)
+            setScore(score)
         });
     var loc10 = new google.maps.Marker({position:{lat:41.8758,lng:-87.6242}, map:gMap});
     loc10.setIcon('http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png');
@@ -103,19 +101,20 @@ function initMap() {
         loc10.addListener('click', function() {
             infoWindow10.open(gMap, loc10);
             ++score
-            Score(score)
+            setScore(score)
         });
+
+        setScore(score);
+        setHint("hint")
 
     google.maps.event.addListener(gMap,'idle', function() {
         updateGame()
     });
 }
 
-Score(score);
-SetHint("hint")
 
-function Score() {
-    document.getElementById("Score-id").value = score;
+function setScore(updateScore) {
+    document.getElementById("Score-id").value = updateScore;
 }
 
 function SetHint(hint) {
@@ -126,47 +125,47 @@ function updateGame() {
     console.log('function updateGame()');
     var zoomLevel = gMap.getZoom()
     var inBounds = false;
-    SetHint("You are out of Bounds");
+    setHint("You are out of Bounds");
 
     if (gMap.getBounds().contains({lat:35.6860,lng:139.7685})) { //loc1
         inBounds = true;
-        SetHint("You are In bounds for location 1");
+        setHint("You are In bounds for location 1");
     }
     if (gMap.getBounds().contains({lat:42.0829,lng:-85.8667})) { //loc2
         inBounds = true;
-        SetHint("You are In bounds for location 2");
+        setHint("You are In bounds for location 2");
     }
     if (gMap.getBounds().contains({lat:41.3505,lng:-88.8419})) { //loc3
         inBounds = true;
-        SetHint("You are In bounds for location 3");
+        setHint("You are In bounds for location 3");
     }
     if (gMap.getBounds().contains({lat:41.3204,lng:-88.9935})) { //loc4
         inBounds = true;
-        SetHint("You are In bounds for location 4");
+        setHint("You are In bounds for location 4");
     }
     if (gMap.getBounds().contains({lat:25.7634,lng:-80.1916})) { //loc5
         inBounds = true;
-        SetHint("You are In bounds for location 5");
+        setHint("You are In bounds for location 5");
     }
     if (gMap.getBounds().contains({lat:46.1423,lng:-88.0940})) { //loc6
         inBounds = true;
-        SetHint("You are In bounds for location 6");
+        setHint("You are In bounds for location 6");
     }
     if (gMap.getBounds().contains({lat:43.6274,lng:-89.7605})) { //loc7
         inBounds = true;
-        SetHint("You are In bounds for location 7");
+        setHint("You are In bounds for location 7");
     }
     if (gMap.getBounds().contains({lat:30.2695,lng:-97.7441})) { //loc8
         inBounds = true;
-        SetHint("You are In bounds for location 8");
+        setHint("You are In bounds for location 8");
     }
     if (gMap.getBounds().contains({lat:41.6055,lng:-88.0783})) { //loc9
         inBounds = true;
-        SetHint("You are In bounds for location 9");
+        setHint("You are In bounds for location 9");
     }
     if (gMap.getBounds().contains({lat:41.8758,lng:-87.6242})) { //loc10
         inBounds = true;
-        SetHint("You are In bounds for location 10");
+        setHint("You are In bounds for location 10");
     }
 
     console.log("inBounds:"+inBounds+" zoomLevel:"+zoomLevel);
