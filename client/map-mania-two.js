@@ -1,5 +1,3 @@
-const { text } = require("express");
-
 var gMap;
 var score = 0
 
