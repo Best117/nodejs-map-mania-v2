@@ -1,6 +1,26 @@
 var gMap;
 var score = 0
 
+var modal = document.getElementById("infoModal");
+
+var btn = document.getElementById("button");
+
+var span = document.getElementsByClassName("close")[0];
+ 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 function initMap() {
     gMap = new google.maps.Map(document.getElementById('myMapID'), {
         center: {lat: 41.878, lng: 10}, zoom: 2});
