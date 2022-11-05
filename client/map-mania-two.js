@@ -105,13 +105,13 @@ function initMap() {
         });
 
         setScore(score);
-        setHint("hint")
 
     google.maps.event.addListener(gMap,'idle', function() {
         updateGame()
     });
 }
 
+setHint("hint")
 
 function setScore(updateScore) {
     document.getElementById("Score-id").value = updateScore;
