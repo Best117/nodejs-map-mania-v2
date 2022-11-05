@@ -172,6 +172,11 @@ function updateGame() {
     console.log("inBounds:"+inBounds+" zoomLevel:"+zoomLevel);
 }
 
+function winThreshold() {
+    if (score = 10)
+    window.open("You have won the game!");
+}
+
 function initApplication() {
     console.log('Map Mania: My 10 Favorite Locations Has Begun!');
 }
