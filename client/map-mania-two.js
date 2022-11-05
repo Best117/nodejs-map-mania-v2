@@ -175,7 +175,7 @@ function updateGame() {
 function cheat(){
     let text = "Are you sure you want to cheat?";
     if (confirm(text) == true){
-        score + 10
+        updateScore + 10
         setScore(updateScore)
     } else {
         text = "You are not a cheater.";
