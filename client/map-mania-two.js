@@ -124,13 +124,6 @@ function setHint(hint) {
     document.getElementById("Hint-id").value = hint;
 }
 
-function winThreshold(win) {
-    var text;
-    if (score > 9)
-    text= "win";
-    document.getElementById("Win-id").value = win;
-}
-
 function updateGame() {
     console.log('function updateGame()');
     var zoomLevel = gMap.getZoom()
@@ -179,6 +172,12 @@ function updateGame() {
     }
 
     console.log("inBounds:"+inBounds+" zoomLevel:"+zoomLevel);
+}
+
+function setWin(win) {
+    if (score = 10)
+    setWin = "You have won the game!";
+    document.getElementById("Win-id").value = win;
 }
 
 function initApplication() {
