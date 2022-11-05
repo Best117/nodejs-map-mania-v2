@@ -172,6 +172,16 @@ function updateGame() {
     console.log("inBounds:"+inBounds+" zoomLevel:"+zoomLevel);
 }
 
+function cheat(){
+    let text = "Are you sure you want to cheat?";
+    if (confirm(text) == true){
+        score + 10
+        setScore(score)
+    } else {
+        text = "You are not a cheater.";
+    }
+}
+
 function initApplication() {
     console.log('Map Mania: My 10 Favorite Locations Has Begun!');
 }
