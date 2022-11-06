@@ -178,7 +178,13 @@ function cheat(){
         updateScore + 10
         setScore(updateScore)
     } else {
-        text = "You are not a cheater.";
+        alert("You are not a cheater.");
+    }
+}
+
+function win(){
+    if(score > 9){
+        alert("You have won the game!");
     }
 }
 
