@@ -183,7 +183,7 @@ function cheat(){
 }
 
 function win(){
-    if(score > 9){
+    if(updateScore > 9){
         alert("You have won the game!");
     }
 }
