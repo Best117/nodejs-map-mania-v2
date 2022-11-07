@@ -168,13 +168,13 @@ function cheat(){
     updateScore = 10;
     setScore(updateScore);
     } else {
-    alert("You are not a cheater.");
+    window.alert("You are not a cheater.");
     }
 }
 
 function win(){
     if(updateScore > 9){
-    alert("You have won the game!");
+    window.alert("You have won the game!");
     }
 }
 
