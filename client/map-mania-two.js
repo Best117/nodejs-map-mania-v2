@@ -173,7 +173,7 @@ function cheat(){
 }
 
 function win(){
-    if(updateScore == 10){
+    if(updateScore > 9){
     alert("You have won the game!");
     } else {
     alert("You have not reached 10 points.");
